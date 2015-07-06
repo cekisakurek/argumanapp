@@ -14,6 +14,11 @@
 		CF64A6171B4A9A5D00F29857 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF64A6161B4A9A5D00F29857 /* Images.xcassets */; };
 		CF64A61A1B4A9A5D00F29857 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF64A6181B4A9A5D00F29857 /* LaunchScreen.xib */; };
 		CF64A6261B4A9A5D00F29857 /* ArgumanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF64A6251B4A9A5D00F29857 /* ArgumanTests.m */; };
+		CF64A6331B4A9A9F00F29857 /* Argument.m in Sources */ = {isa = PBXBuildFile; fileRef = CF64A6321B4A9A9F00F29857 /* Argument.m */; };
+		CF64A6361B4A9AAB00F29857 /* Premise.m in Sources */ = {isa = PBXBuildFile; fileRef = CF64A6351B4A9AAB00F29857 /* Premise.m */; };
+		CF64A63A1B4A9B1700F29857 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = CF64A6391B4A9B1700F29857 /* User.m */; };
+		CF64A63E1B4A9B3B00F29857 /* Newsfeed.m in Sources */ = {isa = PBXBuildFile; fileRef = CF64A63D1B4A9B3B00F29857 /* Newsfeed.m */; };
+		CF64A6421B4A9B7300F29857 /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = CF64A6411B4A9B7300F29857 /* Notification.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,16 @@
 		CF64A61F1B4A9A5D00F29857 /* ArgumanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArgumanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF64A6241B4A9A5D00F29857 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF64A6251B4A9A5D00F29857 /* ArgumanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArgumanTests.m; sourceTree = "<group>"; };
+		CF64A6311B4A9A9F00F29857 /* Argument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Argument.h; path = Model/Arguments/Argument.h; sourceTree = "<group>"; };
+		CF64A6321B4A9A9F00F29857 /* Argument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Argument.m; path = Model/Arguments/Argument.m; sourceTree = "<group>"; };
+		CF64A6341B4A9AAB00F29857 /* Premise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Premise.h; path = Model/Arguments/Premise.h; sourceTree = "<group>"; };
+		CF64A6351B4A9AAB00F29857 /* Premise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Premise.m; path = Model/Arguments/Premise.m; sourceTree = "<group>"; };
+		CF64A6381B4A9B1700F29857 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/Auth/User.h; sourceTree = "<group>"; };
+		CF64A6391B4A9B1700F29857 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/Auth/User.m; sourceTree = "<group>"; };
+		CF64A63C1B4A9B3B00F29857 /* Newsfeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Newsfeed.h; path = Model/Newsfeed/Newsfeed.h; sourceTree = "<group>"; };
+		CF64A63D1B4A9B3B00F29857 /* Newsfeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Newsfeed.m; path = Model/Newsfeed/Newsfeed.m; sourceTree = "<group>"; };
+		CF64A6401B4A9B7300F29857 /* Notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Notification.h; path = Model/Notifications/Notification.h; sourceTree = "<group>"; };
+		CF64A6411B4A9B7300F29857 /* Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Notification.m; path = Model/Notifications/Notification.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +96,7 @@
 		CF64A6081B4A9A5D00F29857 /* Arguman */ = {
 			isa = PBXGroup;
 			children = (
+				CF64A62F1B4A9A6800F29857 /* Model */,
 				CF64A60D1B4A9A5D00F29857 /* AppDelegate.h */,
 				CF64A60E1B4A9A5D00F29857 /* AppDelegate.m */,
 				CF64A6101B4A9A5D00F29857 /* ViewController.h */,
@@ -117,6 +133,55 @@
 				CF64A6241B4A9A5D00F29857 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CF64A62F1B4A9A6800F29857 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF64A63F1B4A9B6600F29857 /* Notifications */,
+				CF64A63B1B4A9B2B00F29857 /* Newsfeed */,
+				CF64A6371B4A9B0B00F29857 /* Auth */,
+				CF64A6301B4A9A7F00F29857 /* Arguments */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CF64A6301B4A9A7F00F29857 /* Arguments */ = {
+			isa = PBXGroup;
+			children = (
+				CF64A6311B4A9A9F00F29857 /* Argument.h */,
+				CF64A6321B4A9A9F00F29857 /* Argument.m */,
+				CF64A6341B4A9AAB00F29857 /* Premise.h */,
+				CF64A6351B4A9AAB00F29857 /* Premise.m */,
+			);
+			name = Arguments;
+			sourceTree = "<group>";
+		};
+		CF64A6371B4A9B0B00F29857 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				CF64A6381B4A9B1700F29857 /* User.h */,
+				CF64A6391B4A9B1700F29857 /* User.m */,
+			);
+			name = Auth;
+			sourceTree = "<group>";
+		};
+		CF64A63B1B4A9B2B00F29857 /* Newsfeed */ = {
+			isa = PBXGroup;
+			children = (
+				CF64A63C1B4A9B3B00F29857 /* Newsfeed.h */,
+				CF64A63D1B4A9B3B00F29857 /* Newsfeed.m */,
+			);
+			name = Newsfeed;
+			sourceTree = "<group>";
+		};
+		CF64A63F1B4A9B6600F29857 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				CF64A6401B4A9B7300F29857 /* Notification.h */,
+				CF64A6411B4A9B7300F29857 /* Notification.m */,
+			);
+			name = Notifications;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +284,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF64A6421B4A9B7300F29857 /* Notification.m in Sources */,
+				CF64A6331B4A9A9F00F29857 /* Argument.m in Sources */,
 				CF64A6121B4A9A5D00F29857 /* ViewController.m in Sources */,
+				CF64A63A1B4A9B1700F29857 /* User.m in Sources */,
 				CF64A60F1B4A9A5D00F29857 /* AppDelegate.m in Sources */,
 				CF64A60C1B4A9A5D00F29857 /* main.m in Sources */,
+				CF64A63E1B4A9B3B00F29857 /* Newsfeed.m in Sources */,
+				CF64A6361B4A9AAB00F29857 /* Premise.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

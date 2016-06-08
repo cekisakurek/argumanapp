@@ -7,67 +7,60 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Premise.h"
 @class User;
+
+NS_ASSUME_NONNULL_BEGIN
+@interface ArgumentsController : NSObject
+
+@property (readonly, copy) NSMutableArray *results;
+@property (readonly, strong) NSURL *next;
+@property (readonly, strong) NSURL *previous;
+@property (readonly, assign) NSUInteger count;
+
++ (void)getArgumentsWithCompletion:(void (^)(ArgumentsController *argumentsController, NSError *error))completionBlock;
++ (void)getFeaturedArgumentsWithCompletion:(void (^)(ArgumentsController *argumentsController, NSError *error))completionBlock;
++ (void)searchArguments:(NSString *)keyword completion:(void (^)(ArgumentsController *argumentsController, NSError *error))completionBlock;
+
+@end
+
+
 @interface Argument : NSObject
 
-@property (readonly) NSNumber *Id;
-@property (readonly) User *user;
-@property (copy) NSString *title;
-@property (readonly) NSString *slug;
-@property (readonly) NSString *argumentDescription;
-@property (copy) NSString *sources;
-@property (readonly) NSArray *premises;
-@property (readonly) NSDate *creationDate;
-@property (readonly) NSURL *absoluteURL;
-@property (readonly) NSNumber *reportCount;
-@property (assign,readonly,getter = isFeatured) BOOL featured;
-@property (assign,getter = isPublished) BOOL published;
-/*
- 
- Request:
- curl -X POST  -H "Authorization: Token 66e84d2dd71ecb992c9baa331c72eca58f239909"
- -H "Content-Type: application/json"
- -d '{"title":"Sanat toplum içindir.", "sources": "Türk Dil Kurumu", "owner": "http://google.com/", "is_published": true}'
- http://arguman.org/api/v1/arguments/
- 
- Response (201 Created)
- {
- "id":5,
- "user":{
- "id":1,
- "username":"bahattincinic",
- "absolute_url":"/api/v1/users/bahattincinic/",
- "avatar":"https://secure.gravatar.com/avatar/c1184fefac22e49bbf59e3775ef6e9dd.jpg?s=80&r=g&d=mm"
- },
- "title":"Sanat toplum i\u00e7indir.",
- "slug":"sanat-toplum-icindir",
- "description":null,
- "owner":"http://google.com/",
- "sources":"Türk Dil Kurumu",
- "premises":[
- 
- ],
- "date_creation":"20-02-2015 12:02",
- "absolute_url":"/api/v1/arguments/5/",
- "report_count":0,
- "is_featured":false,
- "is_published":true
- }
- */
+
+@property (readonly, copy) NSNumber *ID;
+@property (readonly,copy) User *user;
+@property (readonly,copy) NSString *title;
+@property (readonly,copy) NSString *slug;
+@property (readonly,copy) NSString *argumentDescription;
+@property (readonly,copy) NSString *sources;
+@property (readonly,copy) NSArray *premises;
+@property (readonly,copy) NSDate *dateCreated;
+@property (readonly,copy) NSURL *absoluteURL;
+@property (readonly,copy) NSNumber *reportCount;
+@property (readonly,assign,getter = isFeatured) BOOL featured;
+@property (readonly,assign,getter = isPublished) BOOL published;
+@property (readonly,copy) NSString *owner;
 
 
-+ (void)postArgumentWithTitle:(NSString *)title published:(BOOL)published completion:(void (^)(Argument *argument, NSError *error))completionBlock;
-+ (void)postArgumentWithTitle:(NSString *)title published:(BOOL)published sources:(NSString *)sources owner:(NSString *)owner completion:(void (^)(Argument *argument, NSError *error))completionBlock;
+// creates a new argument
++ (void)postArgumentWithTitle:(NSString *)title sources:(nullable NSString *)sources owner:(nullable NSString *)owner publish:(BOOL)publish completion:(nullable void (^)(Argument * _Nullable argument, NSError * _Nullable error))completionBlock;
 
-/*
- curl -X PUT  -H "Authorization: Token 66e84d2dd71ecb992c9baa331c72eca58f239909"
- -H "Content-Type: application/json"
- -d '{"title":"Sanat toplum içindir.", "sources": "Türk Dil Kurumu", "owner": "http://google.com/", "is_published": true}'
- http://arguman.org/api/v1/arguments/9/
- response : same
- */
 
-- (void)saveWithCompletion:(void (^)(Argument *argument, NSError *error))completionBlock;
+// updates/edits argument
+- (void)putArgumentWithTitle:(NSString *)title sources:(nullable NSString *)sources owner:(nullable NSString *)owner publish:(BOOL)publish completion:(void (^)(Argument * _Nullable argument, NSError * _Nullable error))completionBlock;
+
+- (void)deleteArgumentWithCompletion:(void (^)(NSError * _Nullable error))completionBlock;
+
+
+- (void)postPremiseWithType:(PremiseType)type text:(NSString *)text sources:(nullable NSString *)sources completion:(void (^)(Premise * _Nullable premise, NSError * _Nullable error))completionBlock;
+
+
++ (void)getArgumentWithID:(NSString *)ID completion:(void (^)(Argument * _Nullable argument, NSError * _Nullable error))completionBlock;
+
+
+- (void)getPremisesWithCompletion:(void (^)(NSArray *premises, NSError *error))completionBlock;
 
 
 @end
+NS_ASSUME_NONNULL_END

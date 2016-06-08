@@ -7,9 +7,10 @@
 //
 
 #import "AppDelegate.h"
-
+#import "User.h"
+#import "NewsfeedViewController.h"
 @interface AppDelegate ()
-
+@property (strong) UITabBarController *tabBarController;
 @end
 
 @implementation AppDelegate
@@ -17,6 +18,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
+    self.tabBarController = [[UITabBarController alloc] init];
+
+
+    NewsfeedViewController *newsfeedViewController = [[NewsfeedViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:newsfeedViewController];
+    [self.tabBarController setViewControllers:@[navigationController]];
+
+    self.window.rootViewController = self.tabBarController;
+
+//    User *user = [[User alloc] init];
+//    user.username = @"cekisakurek@gmail.com";
+//    user.password = @"asdasd123";
+//    [user authenticateWithCompletion:^(User *user, NSError *error) {
+//        NSLog(@"%@",user.token);
+//    }];
+
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 

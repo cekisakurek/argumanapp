@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF02A0E11D06F43D005710B1 /* Contention.m in Sources */ = {isa = PBXBuildFile; fileRef = CF02A0E01D06F43D005710B1 /* Contention.m */; };
+		CF02A0E41D06F693005710B1 /* NewsfeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF02A0E31D06F693005710B1 /* NewsfeedCell.m */; };
+		CF1B7C3C1D05D39500260CD4 /* ServerEndPoints.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1B7C3B1D05D39500260CD4 /* ServerEndPoints.m */; };
+		CF1B7C411D05E5A400260CD4 /* NewsfeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1B7C401D05E5A400260CD4 /* NewsfeedViewController.m */; };
 		CF64A60C1B4A9A5D00F29857 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF64A60B1B4A9A5D00F29857 /* main.m */; };
 		CF64A60F1B4A9A5D00F29857 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF64A60E1B4A9A5D00F29857 /* AppDelegate.m */; };
-		CF64A6121B4A9A5D00F29857 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF64A6111B4A9A5D00F29857 /* ViewController.m */; };
-		CF64A6151B4A9A5D00F29857 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF64A6131B4A9A5D00F29857 /* Main.storyboard */; };
 		CF64A6171B4A9A5D00F29857 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF64A6161B4A9A5D00F29857 /* Images.xcassets */; };
 		CF64A61A1B4A9A5D00F29857 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF64A6181B4A9A5D00F29857 /* LaunchScreen.xib */; };
 		CF64A6261B4A9A5D00F29857 /* ArgumanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF64A6251B4A9A5D00F29857 /* ArgumanTests.m */; };
@@ -19,6 +21,12 @@
 		CF64A63A1B4A9B1700F29857 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = CF64A6391B4A9B1700F29857 /* User.m */; };
 		CF64A63E1B4A9B3B00F29857 /* Newsfeed.m in Sources */ = {isa = PBXBuildFile; fileRef = CF64A63D1B4A9B3B00F29857 /* Newsfeed.m */; };
 		CF64A6421B4A9B7300F29857 /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = CF64A6411B4A9B7300F29857 /* Notification.m */; };
+		CF698C5A1D072052000DB479 /* ArgumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF698C591D072052000DB479 /* ArgumentViewController.m */; };
+		CF698C5D1D072573000DB479 /* ArgumentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF698C5C1D072573000DB479 /* ArgumentCell.m */; };
+		CFAEBDAE1D0819B70097597F /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAEBDAD1D0819B70097597F /* Helpers.m */; };
+		CFAEBDE81D084FDB0097597F /* Fallacy.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAEBDE71D084FDB0097597F /* Fallacy.m */; };
+		CFAEBDEB1D0872650097597F /* ARGError.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAEBDEA1D0872650097597F /* ARGError.m */; };
+		CFAEBDEF1D087A490097597F /* UIImageView+Async.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAEBDEE1D087A490097597F /* UIImageView+Async.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +40,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF02A0DF1D06F43D005710B1 /* Contention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Contention.h; path = Model/Arguments/Contention.h; sourceTree = "<group>"; };
+		CF02A0E01D06F43D005710B1 /* Contention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Contention.m; path = Model/Arguments/Contention.m; sourceTree = "<group>"; };
+		CF02A0E21D06F693005710B1 /* NewsfeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsfeedCell.h; path = ViewControllers/NewsfeedViewController/NewsfeedCell.h; sourceTree = "<group>"; };
+		CF02A0E31D06F693005710B1 /* NewsfeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsfeedCell.m; path = ViewControllers/NewsfeedViewController/NewsfeedCell.m; sourceTree = "<group>"; };
+		CF1B7C381D05D30200260CD4 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		CF1B7C3A1D05D39500260CD4 /* ServerEndPoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerEndPoints.h; path = Model/Server/ServerEndPoints.h; sourceTree = "<group>"; };
+		CF1B7C3B1D05D39500260CD4 /* ServerEndPoints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServerEndPoints.m; path = Model/Server/ServerEndPoints.m; sourceTree = "<group>"; };
+		CF1B7C3F1D05E5A400260CD4 /* NewsfeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsfeedViewController.h; path = ViewControllers/NewsfeedViewController/NewsfeedViewController.h; sourceTree = "<group>"; };
+		CF1B7C401D05E5A400260CD4 /* NewsfeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsfeedViewController.m; path = ViewControllers/NewsfeedViewController/NewsfeedViewController.m; sourceTree = "<group>"; };
 		CF64A6061B4A9A5D00F29857 /* Arguman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arguman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF64A60A1B4A9A5D00F29857 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF64A60B1B4A9A5D00F29857 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CF64A60D1B4A9A5D00F29857 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CF64A60E1B4A9A5D00F29857 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CF64A6101B4A9A5D00F29857 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CF64A6111B4A9A5D00F29857 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CF64A6141B4A9A5D00F29857 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF64A6161B4A9A5D00F29857 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CF64A6191B4A9A5D00F29857 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CF64A61F1B4A9A5D00F29857 /* ArgumanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArgumanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +69,18 @@
 		CF64A63D1B4A9B3B00F29857 /* Newsfeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Newsfeed.m; path = Model/Newsfeed/Newsfeed.m; sourceTree = "<group>"; };
 		CF64A6401B4A9B7300F29857 /* Notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Notification.h; path = Model/Notifications/Notification.h; sourceTree = "<group>"; };
 		CF64A6411B4A9B7300F29857 /* Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Notification.m; path = Model/Notifications/Notification.m; sourceTree = "<group>"; };
+		CF698C581D072052000DB479 /* ArgumentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArgumentViewController.h; path = ViewControllers/ArgumentViewController/ArgumentViewController.h; sourceTree = "<group>"; };
+		CF698C591D072052000DB479 /* ArgumentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArgumentViewController.m; path = ViewControllers/ArgumentViewController/ArgumentViewController.m; sourceTree = "<group>"; };
+		CF698C5B1D072573000DB479 /* ArgumentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArgumentCell.h; path = ViewControllers/ArgumentViewController/ArgumentCell.h; sourceTree = "<group>"; };
+		CF698C5C1D072573000DB479 /* ArgumentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArgumentCell.m; path = ViewControllers/ArgumentViewController/ArgumentCell.m; sourceTree = "<group>"; };
+		CFAEBDAC1D0819B70097597F /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
+		CFAEBDAD1D0819B70097597F /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
+		CFAEBDE61D084FDB0097597F /* Fallacy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Fallacy.h; path = Model/Fallacy/Fallacy.h; sourceTree = "<group>"; };
+		CFAEBDE71D084FDB0097597F /* Fallacy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Fallacy.m; path = Model/Fallacy/Fallacy.m; sourceTree = "<group>"; };
+		CFAEBDE91D0872650097597F /* ARGError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARGError.h; path = Model/Errors/ARGError.h; sourceTree = "<group>"; };
+		CFAEBDEA1D0872650097597F /* ARGError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARGError.m; path = Model/Errors/ARGError.m; sourceTree = "<group>"; };
+		CFAEBDED1D087A490097597F /* UIImageView+Async.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+Async.h"; path = "Views/Extensions/UIImageView+Async.h"; sourceTree = "<group>"; };
+		CFAEBDEE1D087A490097597F /* UIImageView+Async.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+Async.m"; path = "Views/Extensions/UIImageView+Async.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +101,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF1B7C391D05D37100260CD4 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				CF1B7C3A1D05D39500260CD4 /* ServerEndPoints.h */,
+				CF1B7C3B1D05D39500260CD4 /* ServerEndPoints.m */,
+				CFAEBDE91D0872650097597F /* ARGError.h */,
+				CFAEBDEA1D0872650097597F /* ARGError.m */,
+			);
+			name = Server;
+			sourceTree = "<group>";
+		};
+		CF1B7C3D1D05E58500260CD4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CF698C571D072040000DB479 /* ArgumentViewController */,
+				CF1B7C3E1D05E59000260CD4 /* NewsfeedViewController */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CF1B7C3E1D05E59000260CD4 /* NewsfeedViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CF1B7C3F1D05E5A400260CD4 /* NewsfeedViewController.h */,
+				CF1B7C401D05E5A400260CD4 /* NewsfeedViewController.m */,
+				CF02A0E21D06F693005710B1 /* NewsfeedCell.h */,
+				CF02A0E31D06F693005710B1 /* NewsfeedCell.m */,
+			);
+			name = NewsfeedViewController;
+			sourceTree = "<group>";
+		};
 		CF64A5FD1B4A9A5D00F29857 = {
 			isa = PBXGroup;
 			children = (
@@ -96,12 +153,11 @@
 		CF64A6081B4A9A5D00F29857 /* Arguman */ = {
 			isa = PBXGroup;
 			children = (
+				CFAEBDF01D087A8F0097597F /* Views */,
+				CF1B7C3D1D05E58500260CD4 /* ViewControllers */,
 				CF64A62F1B4A9A6800F29857 /* Model */,
 				CF64A60D1B4A9A5D00F29857 /* AppDelegate.h */,
 				CF64A60E1B4A9A5D00F29857 /* AppDelegate.m */,
-				CF64A6101B4A9A5D00F29857 /* ViewController.h */,
-				CF64A6111B4A9A5D00F29857 /* ViewController.m */,
-				CF64A6131B4A9A5D00F29857 /* Main.storyboard */,
 				CF64A6161B4A9A5D00F29857 /* Images.xcassets */,
 				CF64A6181B4A9A5D00F29857 /* LaunchScreen.xib */,
 				CF64A6091B4A9A5D00F29857 /* Supporting Files */,
@@ -138,10 +194,15 @@
 		CF64A62F1B4A9A6800F29857 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CFAEBDE51D084FCF0097597F /* Fallacy */,
+				CF1B7C391D05D37100260CD4 /* Server */,
 				CF64A63F1B4A9B6600F29857 /* Notifications */,
 				CF64A63B1B4A9B2B00F29857 /* Newsfeed */,
 				CF64A6371B4A9B0B00F29857 /* Auth */,
 				CF64A6301B4A9A7F00F29857 /* Arguments */,
+				CF1B7C381D05D30200260CD4 /* Constants.h */,
+				CFAEBDAC1D0819B70097597F /* Helpers.h */,
+				CFAEBDAD1D0819B70097597F /* Helpers.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -153,6 +214,8 @@
 				CF64A6321B4A9A9F00F29857 /* Argument.m */,
 				CF64A6341B4A9AAB00F29857 /* Premise.h */,
 				CF64A6351B4A9AAB00F29857 /* Premise.m */,
+				CF02A0DF1D06F43D005710B1 /* Contention.h */,
+				CF02A0E01D06F43D005710B1 /* Contention.m */,
 			);
 			name = Arguments;
 			sourceTree = "<group>";
@@ -182,6 +245,43 @@
 				CF64A6411B4A9B7300F29857 /* Notification.m */,
 			);
 			name = Notifications;
+			sourceTree = "<group>";
+		};
+		CF698C571D072040000DB479 /* ArgumentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CF698C581D072052000DB479 /* ArgumentViewController.h */,
+				CF698C591D072052000DB479 /* ArgumentViewController.m */,
+				CF698C5B1D072573000DB479 /* ArgumentCell.h */,
+				CF698C5C1D072573000DB479 /* ArgumentCell.m */,
+			);
+			name = ArgumentViewController;
+			sourceTree = "<group>";
+		};
+		CFAEBDE51D084FCF0097597F /* Fallacy */ = {
+			isa = PBXGroup;
+			children = (
+				CFAEBDE61D084FDB0097597F /* Fallacy.h */,
+				CFAEBDE71D084FDB0097597F /* Fallacy.m */,
+			);
+			name = Fallacy;
+			sourceTree = "<group>";
+		};
+		CFAEBDEC1D087A1C0097597F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CFAEBDED1D087A490097597F /* UIImageView+Async.h */,
+				CFAEBDEE1D087A490097597F /* UIImageView+Async.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		CFAEBDF01D087A8F0097597F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CFAEBDEC1D087A1C0097597F /* Extensions */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,7 +328,7 @@
 		CF64A5FE1B4A9A5D00F29857 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = cekisakurek;
 				TargetAttributes = {
 					CF64A6051B4A9A5D00F29857 = {
@@ -264,7 +364,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF64A6151B4A9A5D00F29857 /* Main.storyboard in Resources */,
 				CF64A61A1B4A9A5D00F29857 /* LaunchScreen.xib in Resources */,
 				CF64A6171B4A9A5D00F29857 /* Images.xcassets in Resources */,
 			);
@@ -286,12 +385,21 @@
 			files = (
 				CF64A6421B4A9B7300F29857 /* Notification.m in Sources */,
 				CF64A6331B4A9A9F00F29857 /* Argument.m in Sources */,
-				CF64A6121B4A9A5D00F29857 /* ViewController.m in Sources */,
 				CF64A63A1B4A9B1700F29857 /* User.m in Sources */,
+				CF1B7C3C1D05D39500260CD4 /* ServerEndPoints.m in Sources */,
 				CF64A60F1B4A9A5D00F29857 /* AppDelegate.m in Sources */,
+				CF698C5A1D072052000DB479 /* ArgumentViewController.m in Sources */,
 				CF64A60C1B4A9A5D00F29857 /* main.m in Sources */,
 				CF64A63E1B4A9B3B00F29857 /* Newsfeed.m in Sources */,
+				CF02A0E41D06F693005710B1 /* NewsfeedCell.m in Sources */,
+				CFAEBDEF1D087A490097597F /* UIImageView+Async.m in Sources */,
+				CFAEBDEB1D0872650097597F /* ARGError.m in Sources */,
+				CF698C5D1D072573000DB479 /* ArgumentCell.m in Sources */,
 				CF64A6361B4A9AAB00F29857 /* Premise.m in Sources */,
+				CFAEBDAE1D0819B70097597F /* Helpers.m in Sources */,
+				CF02A0E11D06F43D005710B1 /* Contention.m in Sources */,
+				CFAEBDE81D084FDB0097597F /* Fallacy.m in Sources */,
+				CF1B7C411D05E5A400260CD4 /* NewsfeedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,14 +422,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CF64A6131B4A9A5D00F29857 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CF64A6141B4A9A5D00F29857 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CF64A6181B4A9A5D00F29857 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -354,6 +454,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -369,7 +470,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -407,7 +508,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -421,6 +522,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Arguman/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cekisakurek.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -431,6 +533,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Arguman/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cekisakurek.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -449,6 +552,7 @@
 				);
 				INFOPLIST_FILE = ArgumanTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cekisakurek.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Arguman.app/Arguman";
 			};
@@ -464,6 +568,7 @@
 				);
 				INFOPLIST_FILE = ArgumanTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cekisakurek.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Arguman.app/Arguman";
 			};
@@ -488,6 +593,7 @@
 				CF64A62B1B4A9A5D00F29857 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF64A62C1B4A9A5D00F29857 /* Build configuration list for PBXNativeTarget "ArgumanTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +602,7 @@
 				CF64A62E1B4A9A5D00F29857 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,46 +10,11 @@
 #import "ServerEndpoints.h"
 #import "User.h"
 #import "Helpers.h"
+#import "Argument.h"
+#import "Fallacy.h"
 
-@implementation NewsfeedRelatedObject
-
-- (instancetype)initWithJSONResponse:(NSDictionary *)response type:(NewsType)type
-{
-    self = [super init];
-    if (self)
-    {
-        _owner = TRY_CAST(response[@"owner"], NSString);
-        _uri = TRY_CAST(response[@"uri"], NSString);
-        
-        if (type == NewsTypeNewArgument)
-        {
-            _text = TRY_CAST(response[@"title"], NSString);
-            _ID = TRY_CAST(response[@"id"], NSNumber);
-        }
-        else if(type == NewsTypeNewPremise)
-        {
-            _text = TRY_CAST(response[@"text"], NSString);
-        }
-        else if(type == NewsTypeFallacy)
-        {
-            _text = TRY_CAST(response[@"reason"], NSString);
-            _fallacyType = TRY_CAST(response[@"fallacy_type"], NSString);
-        }
-
-        _contention = [[Contention alloc] initWithJSONResponse:response[@"contention"]];
-        _type = [TRY_CAST(response[@"premise_type"], NSNumber) integerValue];
-        if (response[@"premise"]) {
-            _premise = [[Premise alloc] initWithJSONResponse:response[@"premise"]];
-        }
-    }
-    return self;
-}
-
-- (instancetype)initWithJSONResponse:(NSDictionary *)response
-{
-    return [self initWithJSONResponse:response type:NewsTypeNewPremise];
-}
-
+@interface Argument ()
+- (instancetype)initWithJSONResponse:(NSDictionary *)response;
 @end
 
 
@@ -66,7 +31,13 @@
 
         _newsType = [TRY_CAST(response[@"news_type"], NSNumber) integerValue];
         _recipients = TRY_CAST(response[@"recipients"], NSArray);
-        _object = [[NewsfeedRelatedObject alloc] initWithJSONResponse:response[@"related_object"] type:_newsType];
+
+        if (_newsType == NewsTypeNewArgument)
+            _object = [[Argument alloc] initWithJSONResponse:TRY_CAST(response[@"related_object"], NSDictionary)];
+        else if(_newsType == NewsTypeNewPremise)
+            _object = [[Premise alloc] initWithJSONResponse:TRY_CAST(response[@"related_object"], NSDictionary)];
+        else if(_newsType == NewsTypeFallacy)
+            _object = [[Fallacy alloc] initWithJSONResponse:TRY_CAST(response[@"related_object"], NSDictionary)];
 
     }
     return self;

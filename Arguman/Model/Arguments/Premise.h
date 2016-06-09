@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "Contention.h"
 #import "User.h"
-#import "Fallacy.h"
 
+@class Fallacy;
 typedef enum : NSUInteger {
     PremiseTypeBut = 0,
     PremiseTypeBecause = 1,

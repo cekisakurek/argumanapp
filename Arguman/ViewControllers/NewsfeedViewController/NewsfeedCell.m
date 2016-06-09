@@ -7,6 +7,8 @@
 //
 
 #import "NewsfeedCell.h"
+#import "Argument.h"
+#import "Fallacy.h"
 
 @interface NewsfeedCell ()
 
@@ -34,8 +36,8 @@
         [self.contentView addSubview:self.topContainerView];
 
         self.avatarImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
-        self.avatarImageView.layer.masksToBounds = YES;
         self.avatarImageView.translatesAutoresizingMaskIntoConstraints = NO;
+        self.avatarImageView.layer.masksToBounds = YES;
         [self.topContainerView addSubview:self.avatarImageView];
 
         self.usernameLabel = [[UILabel alloc] initWithFrame:CGRectZero];
@@ -81,11 +83,12 @@
 }
 
 
-- (void)layoutSubviews
-{
-    [super layoutSubviews];
-    [self layoutIfNeeded];
-}
+//- (void)layoutSubviews
+//{
+//    [super layoutSubviews];
+//    self.avatarImageView.layer.cornerRadius = self.avatarImageView.bounds.size.width/2.0;
+//
+//}
 
 
 - (void)setItem:(NewsfeedItem*)item
@@ -99,27 +102,30 @@
 
     if (item.newsType == NewsTypeNewArgument)
     {
+        Argument *arg = item.object;
+
         //created an argument:
         NSMutableAttributedString *actionNameString = [[NSMutableAttributedString alloc] initWithString:NSLocalizedString(@"created an argument:", nil)];
         NSMutableAttributedString *breakString = [[NSMutableAttributedString alloc] initWithString:@"\n"];
         [actionNameString appendAttributedString:breakString];
-        NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:item.object.text];
+        NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:arg.title];
         [text addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, text.length)];
         [actionNameString appendAttributedString:text];
         self.premiseTextLabel.attributedText = actionNameString;
     }
     else if (item.newsType == NewsTypeNewPremise)
     {
-        NSMutableAttributedString *argumentTitleString = [[NSMutableAttributedString alloc] initWithString:item.object.contention.title];
+        Premise *premise = item.object;
+        NSMutableAttributedString *argumentTitleString = [[NSMutableAttributedString alloc] initWithString:premise.contention.title];
         [argumentTitleString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithWhite:70.0/255.0 alpha:1] range:NSMakeRange(0, argumentTitleString.length)];
 
         NSMutableAttributedString *breakString = [[NSMutableAttributedString alloc] initWithString:@"\n"];
         [argumentTitleString appendAttributedString:breakString];
 
-        NSMutableAttributedString *premiseString = [[NSMutableAttributedString alloc] initWithString:item.object.text];
+        NSMutableAttributedString *premiseString = [[NSMutableAttributedString alloc] initWithString:premise.text];
         [premiseString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, premiseString.length)];
 
-        switch (item.object.type) {
+        switch (premise.type) {
             case PremiseTypeBut:
                 [premiseString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:255.0/255.0 green:133.0/255.0 blue:142.0/255.0 alpha:1] range:NSMakeRange(0, premiseString.length)];
 
@@ -138,14 +144,15 @@
         self.premiseTextLabel.attributedText = argumentTitleString;
     }
     else
-
-    {   NSString *actionNameString = [NSString stringWithFormat:NSLocalizedString(@"Reported %@ for a premise", nil),item.object.fallacyType];
+    {
+        Fallacy *fallacy = item.object;
+        NSString *actionNameString = [NSString stringWithFormat:NSLocalizedString(@"Reported %@ for a premise", nil),fallacy.fallacyType];
         NSMutableAttributedString *fallacyTypeString = [[NSMutableAttributedString alloc] initWithString:actionNameString];
 
         NSMutableAttributedString *breakString = [[NSMutableAttributedString alloc] initWithString:@"\n"];
         [fallacyTypeString appendAttributedString:breakString];
 
-        NSMutableAttributedString *reasonString = [[NSMutableAttributedString alloc] initWithString:item.object.text];
+        NSMutableAttributedString *reasonString = [[NSMutableAttributedString alloc] initWithString:fallacy.reason];
         [reasonString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, reasonString.length)];
         [fallacyTypeString appendAttributedString:reasonString];
         self.premiseTextLabel.attributedText = fallacyTypeString;

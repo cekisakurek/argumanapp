@@ -7,13 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
-
-
+#import "Premise.h"
+#import "Contention.h"
 
 
 @interface Fallacy : NSObject
 
+@property (copy) NSString *reason;
+@property (copy) NSString *fallacyType;
+@property (copy) NSString *language;
+
+@property (strong) Premise *premise;
+@property (strong) Contention *contention;
+
 + (NSArray *)allFallacies;
+
+- (instancetype)initWithJSONResponse:(NSDictionary *)response;
 
 @end
 

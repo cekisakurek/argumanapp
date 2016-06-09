@@ -27,6 +27,66 @@
 }
 
 
+- (NSArray *)topLayerPremises
+{
+    NSMutableArray *array = [NSMutableArray array];
+    for (Premise *p in self.premises) {
+        if (!p.parentID) {
+            [array addObject:p];
+        }
+    }
+
+    NSSortDescriptor *dateDescriptor = [NSSortDescriptor
+                                        sortDescriptorWithKey:@"creationDate"
+                                        ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:dateDescriptor];
+    NSArray *sortedArray = [array
+                                 sortedArrayUsingDescriptors:sortDescriptors];
+
+    return sortedArray;
+}
+
+- (NSNumber *)becauseCount
+{
+    NSUInteger count = 0;
+    for (Premise *p in self.premises)
+        if (p.type == PremiseTypeBecause)
+            count ++;
+    return @(count);
+}
+- (NSNumber *)butCount
+{
+    NSUInteger count = 0;
+    for (Premise *p in self.premises)
+        if (p.type == PremiseTypeBut)
+            count ++;
+    return @(count);
+}
+- (NSNumber *)howeverCount
+{
+    NSUInteger count = 0;
+    for (Premise *p in self.premises)
+        if (p.type == PremiseTypeHowever)
+            count ++;
+    return @(count);
+}
+
+- (NSNumber *)supportRate
+{
+    NSUInteger butSupporters = 0;
+    NSUInteger becauseSupporters = 0;
+    NSUInteger howeverSupporters = 0;
+    for (Premise *p in self.premises) {
+        if (p.type == PremiseTypeHowever)
+            howeverSupporters ++;
+        if (p.type == PremiseTypeBut)
+            butSupporters ++;
+        if (p.type == PremiseTypeBecause)
+            becauseSupporters ++;
+    }
+    return @(0);
+}
+
 - (void)updateFromJSONResponse:(NSDictionary *)response
 {
     _ID = response[@"id"];
@@ -45,7 +105,7 @@
     }
 
     _premises = arr;
-    _dateCreated = formatDateFromString(TRY_CAST(response[@"date_creation"], NSString));
+    _dateCreated = formatDate1FromString(TRY_CAST(response[@"date_creation"], NSString));
     _absoluteURL = formatURLFromString(TRY_CAST(response[@"absolute_url"], NSString));
     _reportCount = TRY_CAST(response[@"report_count"], NSNumber);
     _featured = [TRY_CAST(response[@"is_featured"], NSNumber) boolValue];
@@ -365,9 +425,9 @@
     self = [super init];
     if (self)
     {
-        _next = formatURLFromString(TRY_CAST([NSURL URLWithString:response[@"next"]], NSString));
-        _previous = formatURLFromString(TRY_CAST([NSURL URLWithString:response[@"previous"]], NSString));
-        _count = [TRY_CAST([NSURL URLWithString:response[@"count"]], NSNumber) unsignedIntegerValue];
+        _next = formatURLFromString(TRY_CAST(response[@"next"], NSString));
+        _previous = formatURLFromString(TRY_CAST(response[@"previous"], NSString));
+        _count = [TRY_CAST(response[@"count"], NSNumber) unsignedIntegerValue];
         NSMutableArray *items = [NSMutableArray array];
         for (NSDictionary *i in TRY_CAST(response[@"results"], NSArray))
         {
@@ -397,7 +457,7 @@
     }
     if (featured)
     {
-        [queryString appendString:@"is_featured=true"];
+        [queryString appendString:@"is_featured=True"];
     }
 
     NSMutableString *urlString = [[NSMutableString alloc] initWithString:[[ServerEndPoints argumentEndpointWithId:nil] absoluteString]];

@@ -10,5 +10,6 @@
 
 
 extern NSDate *formatDateFromString(NSString *dateString);
+extern NSDate *formatDate1FromString(NSString *dateString);
 extern NSURL *formatURLFromString(NSString *urlString);
 

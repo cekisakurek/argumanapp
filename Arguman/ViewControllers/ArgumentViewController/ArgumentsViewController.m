@@ -6,14 +6,15 @@
 //  Copyright © 2016 cekisakurek. All rights reserved.
 //
 
-#import "ArgumentViewController.h"
+#import "ArgumentsViewController.h"
 #import "Argument.h"
-#import "ArgumentCell.h"
+#import "ArgumentsCell.h"
 
 @interface ArgumentViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (strong) UITableView *tableView;
-@property (strong) Argument *argument;
-@property (strong) ArgumentCell *heightCalculaterCell;
+@property (strong) ArgumentsController *argumentController;
+@property (strong) ArgumentsCell *heightCalculaterCell;
+@property (strong) UISegmentedControl *segmentedControl;
 @end
 
 @implementation ArgumentViewController
@@ -31,7 +32,14 @@
     self.tableView.estimatedRowHeight = 100.0;
     [self.view addSubview:self.tableView];
 
-    [self.tableView registerClass:[ArgumentCell class] forCellReuseIdentifier:@"cell"];
+    [self.tableView registerClass:[ArgumentsCell class] forCellReuseIdentifier:@"cell"];
+
+
+    NSArray *items = @[NSLocalizedString(@"New", nil),NSLocalizedString(@"Featured", nil)];
+    self.segmentedControl = [[UISegmentedControl alloc] initWithItems:items];
+    [self.segmentedControl addTarget:self action:@selector(segmentChanged:) forControlEvents:UIControlEventValueChanged];
+    self.navigationItem.titleView = self.segmentedControl;
+
 
 }
 
@@ -39,12 +47,33 @@
 {
     [super viewDidLoad];
 
+    self.title = NSLocalizedString(@"Arguments", nil);
+    self.segmentedControl.selectedSegmentIndex = 0;
+    [self.segmentedControl sendActionsForControlEvents:UIControlEventValueChanged];
 
-    __weak ArgumentViewController *weakRef = self;
-    [Argument getArgumentWithID:self.argumentID completion:^(Argument *argument, NSError *error) {
-        weakRef.argument = argument;
-        [weakRef.tableView reloadData];
-    }];
+
+}
+
+- (void)segmentChanged:(id)sender
+{
+    if (self.segmentedControl.selectedSegmentIndex == 0)
+    {
+        __weak ArgumentViewController *weakRef = self;
+
+        [ArgumentsController getArgumentsWithCompletion:^(ArgumentsController *argumentsController, NSError *error) {
+            weakRef.argumentController = argumentsController;
+            [weakRef.tableView reloadData];
+        }];
+    }
+    else if (self.segmentedControl.selectedSegmentIndex == 1)
+    {
+        __weak ArgumentViewController *weakRef = self;
+
+        [ArgumentsController getFeaturedArgumentsWithCompletion:^(ArgumentsController *argumentsController, NSError *error) {
+            weakRef.argumentController = argumentsController;
+            [weakRef.tableView reloadData];
+        }];
+    }
 }
 
 #pragma mark - Table view data source
@@ -56,26 +85,25 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return self.argument.premises.count;
+    return self.argumentController.results.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ArgumentCell *cell = (ArgumentCell *)[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-//    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    ArgumentsCell *cell = (ArgumentsCell *)[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     // Configure the cell...
 
-    Premise *p = self.argument.premises[indexPath.row];
-
-
-    [cell setPremise:p];
+    Argument *arg = self.argumentController.results[indexPath.row];
+    [cell setArgument:arg];
 
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  }
+
+}
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -92,12 +120,12 @@
     // never returned from the tableView:cellForRowAtIndexPath: method!
 
     if (!self.heightCalculaterCell) {
-        self.heightCalculaterCell = [[ArgumentCell alloc] init];
+        self.heightCalculaterCell = [[ArgumentsCell alloc] init];
 
     }
 
-    Premise *p = self.argument.premises[indexPath.row];
-    [self.heightCalculaterCell setPremise:p];
+    Argument *arg = self.argumentController.results[indexPath.row];
+    [self.heightCalculaterCell setArgument:arg];
 
 
     // Configure the cell with content for the given indexPath, for example:

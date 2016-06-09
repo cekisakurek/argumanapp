@@ -9,7 +9,9 @@
 #import "NewsfeedViewController.h"
 #import "Newsfeed.h"
 #import "NewsfeedCell.h"
-#import "ArgumentViewController.h"
+#import "ArgumentsViewController.h"
+#import "Argument.h"
+#import "Fallacy.h"
 @interface NewsfeedViewController()<UITableViewDelegate,UITableViewDataSource>
 @property (strong) UITableView *tableView;
 @property (strong) NewsfeedController *controller;
@@ -78,27 +80,30 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NewsfeedItem *item = self.controller.results[indexPath.row];
-    NSString *ID;
-    if (item.newsType == NewsTypeNewArgument)
-    {
-        ID = [item.object.ID stringValue];
-
-    }
-    else if (item.newsType == NewsTypeNewPremise)
-    {
-        ID = [item.object.ID stringValue];
-
-    }
-    else
-    {
-        ID = [item.object.ID stringValue];
-
-    }
-
-    ArgumentViewController *argumentViewController = [[ArgumentViewController alloc] init];
-    argumentViewController.argumentID = ID;
-    [self.navigationController pushViewController:argumentViewController animated:YES];
+//    NewsfeedItem *item = self.controller.results[indexPath.row];
+//    NSString *ID;
+//    if (item.newsType == NewsTypeNewArgument)
+//    {
+//        Argument *arg = item.object;
+//        ID = [arg.ID stringValue];
+//
+//    }
+//    else if (item.newsType == NewsTypeNewPremise)
+//    {
+//        Premise *premise = item.object;
+//        ID = [premise.contention.ID stringValue];
+//
+//    }
+//    else
+//    {
+//        Fallacy *fallacy = item.object;
+//        ID = [fallacy.contention.ID stringValue];
+//
+//    }
+//
+//    ArgumentViewController *argumentViewController = [[ArgumentViewController alloc] init];
+//    argumentViewController.argumentID = ID;
+//    [self.navigationController pushViewController:argumentViewController animated:YES];
 }
 
 

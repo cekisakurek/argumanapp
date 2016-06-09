@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Premise.h"
-@interface ArgumentCell : UITableViewCell
+#import "Argument.h"
+@interface ArgumentsCell : UITableViewCell
 
 
-- (void)setPremise:(Premise *)premise;
+- (void)setArgument:(Argument *)arg;
 
 @end

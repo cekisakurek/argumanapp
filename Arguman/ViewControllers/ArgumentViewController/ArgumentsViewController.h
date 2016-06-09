@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ArgumentViewController : UIViewController
-@property (copy) NSString *argumentID;
+
 @end

@@ -17,18 +17,18 @@ typedef enum : NSInteger {
     NewsTypeNewPremise = 1,
     NewsTypeFallacy = 2
 } NewsType;
-
-@interface NewsfeedRelatedObject : NSObject
-@property (readonly, copy) NSString *owner;
-@property (readonly, copy) NSString *uri;
-@property (readonly, copy) NSString *text;
-@property (readonly,assign) PremiseType type;
-@property (readonly,strong) Contention *contention;
-@property (readonly, copy) NSString *reason;
-@property (readonly, copy) NSString *fallacyType;
-@property (readonly,strong) Premise *premise;
-@property (readonly,readonly) NSNumber *ID;
-@end
+//
+//@interface NewsfeedRelatedObject : NSObject
+//@property (readonly, copy) NSString *owner;
+//@property (readonly, copy) NSString *uri;
+//@property (readonly, copy) NSString *text;
+//@property (readonly,assign) PremiseType type;
+//@property (readonly,strong) Contention *contention;
+//@property (readonly, copy) NSString *reason;
+//@property (readonly, copy) NSString *fallacyType;
+//@property (readonly,strong) Premise *premise;
+//@property (readonly,readonly) NSNumber *ID;
+//@end
 
 @interface NewsfeedItem : NSObject
 @property (readonly, copy) NSString *ID;
@@ -36,7 +36,7 @@ typedef enum : NSInteger {
 @property (readonly, strong) NSDate *dateCreated;
 @property (readonly,strong) User *sender;
 @property (readonly,copy) NSArray *recipients;
-@property (readonly,strong) NewsfeedRelatedObject *object;
+@property (readonly,strong) id object;
 
 @end
 

@@ -21,12 +21,13 @@
 		CF64A63A1B4A9B1700F29857 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = CF64A6391B4A9B1700F29857 /* User.m */; };
 		CF64A63E1B4A9B3B00F29857 /* Newsfeed.m in Sources */ = {isa = PBXBuildFile; fileRef = CF64A63D1B4A9B3B00F29857 /* Newsfeed.m */; };
 		CF64A6421B4A9B7300F29857 /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = CF64A6411B4A9B7300F29857 /* Notification.m */; };
-		CF698C5A1D072052000DB479 /* ArgumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF698C591D072052000DB479 /* ArgumentViewController.m */; };
-		CF698C5D1D072573000DB479 /* ArgumentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF698C5C1D072573000DB479 /* ArgumentCell.m */; };
+		CF698C5A1D072052000DB479 /* ArgumentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF698C591D072052000DB479 /* ArgumentsViewController.m */; };
+		CF698C5D1D072573000DB479 /* ArgumentsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF698C5C1D072573000DB479 /* ArgumentsCell.m */; };
 		CFAEBDAE1D0819B70097597F /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAEBDAD1D0819B70097597F /* Helpers.m */; };
 		CFAEBDE81D084FDB0097597F /* Fallacy.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAEBDE71D084FDB0097597F /* Fallacy.m */; };
 		CFAEBDEB1D0872650097597F /* ARGError.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAEBDEA1D0872650097597F /* ARGError.m */; };
 		CFAEBDEF1D087A490097597F /* UIImageView+Async.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAEBDEE1D087A490097597F /* UIImageView+Async.m */; };
+		CFAEBDF41D09A43A0097597F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAEBDF31D09A43A0097597F /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,10 +70,10 @@
 		CF64A63D1B4A9B3B00F29857 /* Newsfeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Newsfeed.m; path = Model/Newsfeed/Newsfeed.m; sourceTree = "<group>"; };
 		CF64A6401B4A9B7300F29857 /* Notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Notification.h; path = Model/Notifications/Notification.h; sourceTree = "<group>"; };
 		CF64A6411B4A9B7300F29857 /* Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Notification.m; path = Model/Notifications/Notification.m; sourceTree = "<group>"; };
-		CF698C581D072052000DB479 /* ArgumentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArgumentViewController.h; path = ViewControllers/ArgumentViewController/ArgumentViewController.h; sourceTree = "<group>"; };
-		CF698C591D072052000DB479 /* ArgumentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArgumentViewController.m; path = ViewControllers/ArgumentViewController/ArgumentViewController.m; sourceTree = "<group>"; };
-		CF698C5B1D072573000DB479 /* ArgumentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArgumentCell.h; path = ViewControllers/ArgumentViewController/ArgumentCell.h; sourceTree = "<group>"; };
-		CF698C5C1D072573000DB479 /* ArgumentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArgumentCell.m; path = ViewControllers/ArgumentViewController/ArgumentCell.m; sourceTree = "<group>"; };
+		CF698C581D072052000DB479 /* ArgumentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArgumentsViewController.h; path = ViewControllers/ArgumentViewController/ArgumentsViewController.h; sourceTree = "<group>"; };
+		CF698C591D072052000DB479 /* ArgumentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArgumentsViewController.m; path = ViewControllers/ArgumentViewController/ArgumentsViewController.m; sourceTree = "<group>"; };
+		CF698C5B1D072573000DB479 /* ArgumentsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArgumentsCell.h; path = ViewControllers/ArgumentViewController/ArgumentsCell.h; sourceTree = "<group>"; };
+		CF698C5C1D072573000DB479 /* ArgumentsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArgumentsCell.m; path = ViewControllers/ArgumentViewController/ArgumentsCell.m; sourceTree = "<group>"; };
 		CFAEBDAC1D0819B70097597F /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
 		CFAEBDAD1D0819B70097597F /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
 		CFAEBDE61D084FDB0097597F /* Fallacy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Fallacy.h; path = Model/Fallacy/Fallacy.h; sourceTree = "<group>"; };
@@ -81,6 +82,8 @@
 		CFAEBDEA1D0872650097597F /* ARGError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARGError.m; path = Model/Errors/ARGError.m; sourceTree = "<group>"; };
 		CFAEBDED1D087A490097597F /* UIImageView+Async.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+Async.h"; path = "Views/Extensions/UIImageView+Async.h"; sourceTree = "<group>"; };
 		CFAEBDEE1D087A490097597F /* UIImageView+Async.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+Async.m"; path = "Views/Extensions/UIImageView+Async.m"; sourceTree = "<group>"; };
+		CFAEBDF21D09A43A0097597F /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = ViewControllers/SettingsViewController/SettingsViewController.h; sourceTree = "<group>"; };
+		CFAEBDF31D09A43A0097597F /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = ViewControllers/SettingsViewController/SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +118,8 @@
 		CF1B7C3D1D05E58500260CD4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				CF698C571D072040000DB479 /* ArgumentViewController */,
+				CFAEBDF11D09A42C0097597F /* SettingsViewController */,
+				CF698C571D072040000DB479 /* ArgumentsViewController */,
 				CF1B7C3E1D05E59000260CD4 /* NewsfeedViewController */,
 			);
 			name = ViewControllers;
@@ -247,15 +251,15 @@
 			name = Notifications;
 			sourceTree = "<group>";
 		};
-		CF698C571D072040000DB479 /* ArgumentViewController */ = {
+		CF698C571D072040000DB479 /* ArgumentsViewController */ = {
 			isa = PBXGroup;
 			children = (
-				CF698C581D072052000DB479 /* ArgumentViewController.h */,
-				CF698C591D072052000DB479 /* ArgumentViewController.m */,
-				CF698C5B1D072573000DB479 /* ArgumentCell.h */,
-				CF698C5C1D072573000DB479 /* ArgumentCell.m */,
+				CF698C581D072052000DB479 /* ArgumentsViewController.h */,
+				CF698C591D072052000DB479 /* ArgumentsViewController.m */,
+				CF698C5B1D072573000DB479 /* ArgumentsCell.h */,
+				CF698C5C1D072573000DB479 /* ArgumentsCell.m */,
 			);
-			name = ArgumentViewController;
+			name = ArgumentsViewController;
 			sourceTree = "<group>";
 		};
 		CFAEBDE51D084FCF0097597F /* Fallacy */ = {
@@ -282,6 +286,15 @@
 				CFAEBDEC1D087A1C0097597F /* Extensions */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		CFAEBDF11D09A42C0097597F /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CFAEBDF21D09A43A0097597F /* SettingsViewController.h */,
+				CFAEBDF31D09A43A0097597F /* SettingsViewController.m */,
+			);
+			name = SettingsViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,15 +399,16 @@
 				CF64A6421B4A9B7300F29857 /* Notification.m in Sources */,
 				CF64A6331B4A9A9F00F29857 /* Argument.m in Sources */,
 				CF64A63A1B4A9B1700F29857 /* User.m in Sources */,
+				CFAEBDF41D09A43A0097597F /* SettingsViewController.m in Sources */,
 				CF1B7C3C1D05D39500260CD4 /* ServerEndPoints.m in Sources */,
 				CF64A60F1B4A9A5D00F29857 /* AppDelegate.m in Sources */,
-				CF698C5A1D072052000DB479 /* ArgumentViewController.m in Sources */,
+				CF698C5A1D072052000DB479 /* ArgumentsViewController.m in Sources */,
 				CF64A60C1B4A9A5D00F29857 /* main.m in Sources */,
 				CF64A63E1B4A9B3B00F29857 /* Newsfeed.m in Sources */,
 				CF02A0E41D06F693005710B1 /* NewsfeedCell.m in Sources */,
 				CFAEBDEF1D087A490097597F /* UIImageView+Async.m in Sources */,
 				CFAEBDEB1D0872650097597F /* ARGError.m in Sources */,
-				CF698C5D1D072573000DB479 /* ArgumentCell.m in Sources */,
+				CF698C5D1D072573000DB479 /* ArgumentsCell.m in Sources */,
 				CF64A6361B4A9AAB00F29857 /* Premise.m in Sources */,
 				CFAEBDAE1D0819B70097597F /* Helpers.m in Sources */,
 				CF02A0E11D06F43D005710B1 /* Contention.m in Sources */,

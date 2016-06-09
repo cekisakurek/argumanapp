@@ -18,9 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly, strong) NSURL *previous;
 @property (readonly, assign) NSUInteger count;
 
-+ (void)getArgumentsWithCompletion:(void (^)(ArgumentsController *argumentsController, NSError *error))completionBlock;
-+ (void)getFeaturedArgumentsWithCompletion:(void (^)(ArgumentsController *argumentsController, NSError *error))completionBlock;
-+ (void)searchArguments:(NSString *)keyword completion:(void (^)(ArgumentsController *argumentsController, NSError *error))completionBlock;
++ (void)getArgumentsWithCompletion:(void (^)(ArgumentsController * _Nullable argumentsController, NSError * _Nullable error))completionBlock;
++ (void)getFeaturedArgumentsWithCompletion:(void (^)(ArgumentsController * _Nullable argumentsController, NSError * _Nullable error))completionBlock;
++ (void)searchArguments:(NSString *)keyword completion:(void (^)(ArgumentsController * _Nullable argumentsController, NSError * _Nullable error))completionBlock;
 
 @end
 
@@ -42,6 +42,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly,assign,getter = isPublished) BOOL published;
 @property (readonly,copy) NSString *owner;
 
+
+- (NSArray *)topLayerPremises;
+
+- (NSNumber *)becauseCount;
+- (NSNumber *)butCount;
+- (NSNumber *)howeverCount;
+
+- (NSNumber *)supportRate;
 
 // creates a new argument
 + (void)postArgumentWithTitle:(NSString *)title sources:(nullable NSString *)sources owner:(nullable NSString *)owner publish:(BOOL)publish completion:(nullable void (^)(Argument * _Nullable argument, NSError * _Nullable error))completionBlock;

@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "User.h"
 #import "NewsfeedViewController.h"
+#import "ArgumentsViewController.h"
+#import "SettingsViewController.h"
 @interface AppDelegate ()
 @property (strong) UITabBarController *tabBarController;
 @end
@@ -25,8 +27,15 @@
 
 
     NewsfeedViewController *newsfeedViewController = [[NewsfeedViewController alloc] init];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:newsfeedViewController];
-    [self.tabBarController setViewControllers:@[navigationController]];
+    UINavigationController *newsfeedNavigationController = [[UINavigationController alloc] initWithRootViewController:newsfeedViewController];
+
+    ArgumentViewController *argumentViewController = [[ArgumentViewController alloc] init];
+    UINavigationController *argumentNavigationController = [[UINavigationController alloc] initWithRootViewController:argumentViewController];
+
+    SettingsViewController *settingsViewController = [[SettingsViewController alloc] init];
+    UINavigationController *settingsNavigationController = [[UINavigationController alloc] initWithRootViewController:settingsViewController];
+
+    [self.tabBarController setViewControllers:@[newsfeedNavigationController,argumentNavigationController,settingsNavigationController]];
 
     self.window.rootViewController = self.tabBarController;
 

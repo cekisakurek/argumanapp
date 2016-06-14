@@ -1,3 +1,6 @@
 [submodule "vendor/TimeAgo"]
 	path = vendor/TimeAgo
 	url = https://github.com/kevinlawler/NSDate-TimeAgo.git
+[submodule "vendor/AFNetworking"]
+	path = vendor/AFNetworking
+	url = https://github.com/AFNetworking/AFNetworking.git

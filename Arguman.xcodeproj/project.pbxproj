@@ -23,6 +23,8 @@
 		CF64A6421B4A9B7300F29857 /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = CF64A6411B4A9B7300F29857 /* Notification.m */; };
 		CF698C5A1D072052000DB479 /* ArgumentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF698C591D072052000DB479 /* ArgumentsViewController.m */; };
 		CF698C5D1D072573000DB479 /* ArgumentsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF698C5C1D072573000DB479 /* ArgumentsCell.m */; };
+		CFAEB69B1D106E5A0049D0B0 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFAEB68C1D106E440049D0B0 /* AFNetworking.framework */; };
+		CFAEB6B61D106E810049D0B0 /* NSDateTimeAgo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFAEB6AF1D106E6D0049D0B0 /* NSDateTimeAgo.framework */; };
 		CFAEBDAE1D0819B70097597F /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAEBDAD1D0819B70097597F /* Helpers.m */; };
 		CFAEBDE81D084FDB0097597F /* Fallacy.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAEBDE71D084FDB0097597F /* Fallacy.m */; };
 		CFAEBDEB1D0872650097597F /* ARGError.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAEBDEA1D0872650097597F /* ARGError.m */; };
@@ -42,6 +44,90 @@
 			proxyType = 1;
 			remoteGlobalIDString = CF64A6051B4A9A5D00F29857;
 			remoteInfo = Arguman;
+		};
+		CFAEB68B1D106E440049D0B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFAEB6811D106E440049D0B0 /* AFNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 299522391BBF104D00859F49;
+			remoteInfo = "AFNetworking iOS";
+		};
+		CFAEB68D1D106E440049D0B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFAEB6811D106E440049D0B0 /* AFNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 299522651BBF129200859F49;
+			remoteInfo = "AFNetworking watchOS";
+		};
+		CFAEB68F1D106E440049D0B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFAEB6811D106E440049D0B0 /* AFNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 299522771BBF136400859F49;
+			remoteInfo = "AFNetworking OS X";
+		};
+		CFAEB6911D106E440049D0B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFAEB6811D106E440049D0B0 /* AFNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2987B0A51BC408A200179A4C;
+			remoteInfo = "AFNetworking tvOS";
+		};
+		CFAEB6931D106E440049D0B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFAEB6811D106E440049D0B0 /* AFNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 298D7C3B1BC2C79500FD3B3E;
+			remoteInfo = "AFNetworking iOS Tests";
+		};
+		CFAEB6951D106E440049D0B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFAEB6811D106E440049D0B0 /* AFNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 298D7C4A1BC2C7B200FD3B3E;
+			remoteInfo = "AFNetworking Mac OS X Tests";
+		};
+		CFAEB6971D106E440049D0B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFAEB6811D106E440049D0B0 /* AFNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2987B0AE1BC408A200179A4C;
+			remoteInfo = "AFNetworking tvOS Tests";
+		};
+		CFAEB6991D106E4B0049D0B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFAEB6811D106E440049D0B0 /* AFNetworking.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 299522381BBF104D00859F49;
+			remoteInfo = "AFNetworking iOS";
+		};
+		CFAEB6AE1D106E6D0049D0B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFAEB6A81D106E6D0049D0B0 /* NSDateTimeAgo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 833CD3781BCD9BD90085A751;
+			remoteInfo = NSDateTimeAgo;
+		};
+		CFAEB6B01D106E6D0049D0B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFAEB6A81D106E6D0049D0B0 /* NSDateTimeAgo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 83AC39091BD066C500A9C7F7;
+			remoteInfo = NSDateTimeAgoTests;
+		};
+		CFAEB6B21D106E6D0049D0B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFAEB6A81D106E6D0049D0B0 /* NSDateTimeAgo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 535788321CD03AAB00F72193;
+			remoteInfo = "NSDateTimeAgo-OSX";
+		};
+		CFAEB6B41D106E780049D0B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFAEB6A81D106E6D0049D0B0 /* NSDateTimeAgo.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 833CD3771BCD9BD90085A751;
+			remoteInfo = NSDateTimeAgo;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -79,6 +165,8 @@
 		CF698C591D072052000DB479 /* ArgumentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArgumentsViewController.m; path = ViewControllers/ArgumentViewController/ArgumentsViewController.m; sourceTree = "<group>"; };
 		CF698C5B1D072573000DB479 /* ArgumentsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArgumentsCell.h; path = ViewControllers/ArgumentViewController/ArgumentsCell.h; sourceTree = "<group>"; };
 		CF698C5C1D072573000DB479 /* ArgumentsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArgumentsCell.m; path = ViewControllers/ArgumentViewController/ArgumentsCell.m; sourceTree = "<group>"; };
+		CFAEB6811D106E440049D0B0 /* AFNetworking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AFNetworking.xcodeproj; path = vendor/AFNetworking/AFNetworking.xcodeproj; sourceTree = "<group>"; };
+		CFAEB6A81D106E6D0049D0B0 /* NSDateTimeAgo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NSDateTimeAgo.xcodeproj; path = vendor/TimeAgo/NSDateTimeAgo.xcodeproj; sourceTree = "<group>"; };
 		CFAEBDAC1D0819B70097597F /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
 		CFAEBDAD1D0819B70097597F /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
 		CFAEBDE61D084FDB0097597F /* Fallacy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Fallacy.h; path = Model/Fallacy/Fallacy.h; sourceTree = "<group>"; };
@@ -106,6 +194,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFAEB6B61D106E810049D0B0 /* NSDateTimeAgo.framework in Frameworks */,
+				CFAEB69B1D106E5A0049D0B0 /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +247,8 @@
 				CF64A6081B4A9A5D00F29857 /* Arguman */,
 				CF64A6221B4A9A5D00F29857 /* ArgumanTests */,
 				CF64A6071B4A9A5D00F29857 /* Products */,
+				CFAEB6A81D106E6D0049D0B0 /* NSDateTimeAgo.xcodeproj */,
+				CFAEB6811D106E440049D0B0 /* AFNetworking.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -278,6 +370,30 @@
 			name = ArgumentsViewController;
 			sourceTree = "<group>";
 		};
+		CFAEB6821D106E440049D0B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CFAEB68C1D106E440049D0B0 /* AFNetworking.framework */,
+				CFAEB68E1D106E440049D0B0 /* AFNetworking.framework */,
+				CFAEB6901D106E440049D0B0 /* AFNetworking.framework */,
+				CFAEB6921D106E440049D0B0 /* AFNetworking.framework */,
+				CFAEB6941D106E440049D0B0 /* AFNetworking iOS Tests.xctest */,
+				CFAEB6961D106E440049D0B0 /* AFNetworking Mac OS X Tests.xctest */,
+				CFAEB6981D106E440049D0B0 /* AFNetworking tvOS Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CFAEB6A91D106E6D0049D0B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CFAEB6AF1D106E6D0049D0B0 /* NSDateTimeAgo.framework */,
+				CFAEB6B11D106E6D0049D0B0 /* NSDateTimeAgoTests.xctest */,
+				CFAEB6B31D106E6D0049D0B0 /* NSDateTimeAgo.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		CFAEBDE51D084FCF0097597F /* Fallacy */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +468,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				CFAEB6B51D106E780049D0B0 /* PBXTargetDependency */,
+				CFAEB69A1D106E4B0049D0B0 /* PBXTargetDependency */,
 			);
 			name = Arguman;
 			productName = Arguman;
@@ -405,6 +523,16 @@
 			mainGroup = CF64A5FD1B4A9A5D00F29857;
 			productRefGroup = CF64A6071B4A9A5D00F29857 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CFAEB6821D106E440049D0B0 /* Products */;
+					ProjectRef = CFAEB6811D106E440049D0B0 /* AFNetworking.xcodeproj */;
+				},
+				{
+					ProductGroup = CFAEB6A91D106E6D0049D0B0 /* Products */;
+					ProjectRef = CFAEB6A81D106E6D0049D0B0 /* NSDateTimeAgo.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CF64A6051B4A9A5D00F29857 /* Arguman */,
@@ -412,6 +540,79 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CFAEB68C1D106E440049D0B0 /* AFNetworking.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AFNetworking.framework;
+			remoteRef = CFAEB68B1D106E440049D0B0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CFAEB68E1D106E440049D0B0 /* AFNetworking.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AFNetworking.framework;
+			remoteRef = CFAEB68D1D106E440049D0B0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CFAEB6901D106E440049D0B0 /* AFNetworking.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AFNetworking.framework;
+			remoteRef = CFAEB68F1D106E440049D0B0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CFAEB6921D106E440049D0B0 /* AFNetworking.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AFNetworking.framework;
+			remoteRef = CFAEB6911D106E440049D0B0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CFAEB6941D106E440049D0B0 /* AFNetworking iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "AFNetworking iOS Tests.xctest";
+			remoteRef = CFAEB6931D106E440049D0B0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CFAEB6961D106E440049D0B0 /* AFNetworking Mac OS X Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "AFNetworking Mac OS X Tests.xctest";
+			remoteRef = CFAEB6951D106E440049D0B0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CFAEB6981D106E440049D0B0 /* AFNetworking tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "AFNetworking tvOS Tests.xctest";
+			remoteRef = CFAEB6971D106E440049D0B0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CFAEB6AF1D106E6D0049D0B0 /* NSDateTimeAgo.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = NSDateTimeAgo.framework;
+			remoteRef = CFAEB6AE1D106E6D0049D0B0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CFAEB6B11D106E6D0049D0B0 /* NSDateTimeAgoTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = NSDateTimeAgoTests.xctest;
+			remoteRef = CFAEB6B01D106E6D0049D0B0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CFAEB6B31D106E6D0049D0B0 /* NSDateTimeAgo.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = NSDateTimeAgo.framework;
+			remoteRef = CFAEB6B21D106E6D0049D0B0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CF64A6041B4A9A5D00F29857 /* Resources */ = {
@@ -478,6 +679,16 @@
 			isa = PBXTargetDependency;
 			target = CF64A6051B4A9A5D00F29857 /* Arguman */;
 			targetProxy = CF64A6201B4A9A5D00F29857 /* PBXContainerItemProxy */;
+		};
+		CFAEB69A1D106E4B0049D0B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AFNetworking iOS";
+			targetProxy = CFAEB6991D106E4B0049D0B0 /* PBXContainerItemProxy */;
+		};
+		CFAEB6B51D106E780049D0B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NSDateTimeAgo;
+			targetProxy = CFAEB6B41D106E780049D0B0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

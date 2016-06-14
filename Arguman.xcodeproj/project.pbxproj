@@ -28,6 +28,11 @@
 		CFAEBDEB1D0872650097597F /* ARGError.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAEBDEA1D0872650097597F /* ARGError.m */; };
 		CFAEBDEF1D087A490097597F /* UIImageView+Async.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAEBDEE1D087A490097597F /* UIImageView+Async.m */; };
 		CFAEBDF41D09A43A0097597F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAEBDF31D09A43A0097597F /* SettingsViewController.m */; };
+		CFAEBDF81D09A72A0097597F /* ArgumentDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAEBDF71D09A72A0097597F /* ArgumentDetailsViewController.m */; };
+		CFAEBDFB1D09A89C0097597F /* ArgumentTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAEBDFA1D09A89C0097597F /* ArgumentTableHeaderView.m */; };
+		CFAEBDFE1D09BACF0097597F /* PremiseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAEBDFD1D09BACF0097597F /* PremiseCell.m */; };
+		CFAEBE081D09C1660097597F /* PremiseDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAEBE071D09C1660097597F /* PremiseDetailsViewController.m */; };
+		CFCC59121D09C3D900DD55DA /* PremiseTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCC59111D09C3D900DD55DA /* PremiseTableHeaderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +89,16 @@
 		CFAEBDEE1D087A490097597F /* UIImageView+Async.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+Async.m"; path = "Views/Extensions/UIImageView+Async.m"; sourceTree = "<group>"; };
 		CFAEBDF21D09A43A0097597F /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = ViewControllers/SettingsViewController/SettingsViewController.h; sourceTree = "<group>"; };
 		CFAEBDF31D09A43A0097597F /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = ViewControllers/SettingsViewController/SettingsViewController.m; sourceTree = "<group>"; };
+		CFAEBDF61D09A72A0097597F /* ArgumentDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArgumentDetailsViewController.h; path = ViewControllers/ArgumentViewController/ArgumentDetailsViewController/ArgumentDetailsViewController.h; sourceTree = "<group>"; };
+		CFAEBDF71D09A72A0097597F /* ArgumentDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArgumentDetailsViewController.m; path = ViewControllers/ArgumentViewController/ArgumentDetailsViewController/ArgumentDetailsViewController.m; sourceTree = "<group>"; };
+		CFAEBDF91D09A89C0097597F /* ArgumentTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArgumentTableHeaderView.h; path = ViewControllers/ArgumentViewController/ArgumentDetailsViewController/ArgumentTableHeaderView.h; sourceTree = "<group>"; };
+		CFAEBDFA1D09A89C0097597F /* ArgumentTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArgumentTableHeaderView.m; path = ViewControllers/ArgumentViewController/ArgumentDetailsViewController/ArgumentTableHeaderView.m; sourceTree = "<group>"; };
+		CFAEBDFC1D09BACF0097597F /* PremiseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PremiseCell.h; path = ViewControllers/ArgumentViewController/ArgumentDetailsViewController/PremiseCell.h; sourceTree = "<group>"; };
+		CFAEBDFD1D09BACF0097597F /* PremiseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PremiseCell.m; path = ViewControllers/ArgumentViewController/ArgumentDetailsViewController/PremiseCell.m; sourceTree = "<group>"; };
+		CFAEBE061D09C1660097597F /* PremiseDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PremiseDetailsViewController.h; path = ViewControllers/ArgumentViewController/ArgumentDetailsViewController/PremiseDetailsViewController/PremiseDetailsViewController.h; sourceTree = "<group>"; };
+		CFAEBE071D09C1660097597F /* PremiseDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PremiseDetailsViewController.m; path = ViewControllers/ArgumentViewController/ArgumentDetailsViewController/PremiseDetailsViewController/PremiseDetailsViewController.m; sourceTree = "<group>"; };
+		CFCC59101D09C3D900DD55DA /* PremiseTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PremiseTableHeaderView.h; path = ViewControllers/ArgumentViewController/ArgumentDetailsViewController/PremiseDetailsViewController/PremiseTableHeaderView.h; sourceTree = "<group>"; };
+		CFCC59111D09C3D900DD55DA /* PremiseTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PremiseTableHeaderView.m; path = ViewControllers/ArgumentViewController/ArgumentDetailsViewController/PremiseDetailsViewController/PremiseTableHeaderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +269,7 @@
 		CF698C571D072040000DB479 /* ArgumentsViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CFAEBDF51D09A71A0097597F /* ArgumentDetailsViewController */,
 				CF698C581D072052000DB479 /* ArgumentsViewController.h */,
 				CF698C591D072052000DB479 /* ArgumentsViewController.m */,
 				CF698C5B1D072573000DB479 /* ArgumentsCell.h */,
@@ -295,6 +311,31 @@
 				CFAEBDF31D09A43A0097597F /* SettingsViewController.m */,
 			);
 			name = SettingsViewController;
+			sourceTree = "<group>";
+		};
+		CFAEBDF51D09A71A0097597F /* ArgumentDetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CFAEBE051D09C15B0097597F /* PremiseDetailsViewController */,
+				CFAEBDF61D09A72A0097597F /* ArgumentDetailsViewController.h */,
+				CFAEBDF71D09A72A0097597F /* ArgumentDetailsViewController.m */,
+				CFAEBDF91D09A89C0097597F /* ArgumentTableHeaderView.h */,
+				CFAEBDFA1D09A89C0097597F /* ArgumentTableHeaderView.m */,
+				CFAEBDFC1D09BACF0097597F /* PremiseCell.h */,
+				CFAEBDFD1D09BACF0097597F /* PremiseCell.m */,
+			);
+			name = ArgumentDetailsViewController;
+			sourceTree = "<group>";
+		};
+		CFAEBE051D09C15B0097597F /* PremiseDetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CFAEBE061D09C1660097597F /* PremiseDetailsViewController.h */,
+				CFAEBE071D09C1660097597F /* PremiseDetailsViewController.m */,
+				CFCC59101D09C3D900DD55DA /* PremiseTableHeaderView.h */,
+				CFCC59111D09C3D900DD55DA /* PremiseTableHeaderView.m */,
+			);
+			name = PremiseDetailsViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,9 +440,13 @@
 				CF64A6421B4A9B7300F29857 /* Notification.m in Sources */,
 				CF64A6331B4A9A9F00F29857 /* Argument.m in Sources */,
 				CF64A63A1B4A9B1700F29857 /* User.m in Sources */,
+				CFAEBDF81D09A72A0097597F /* ArgumentDetailsViewController.m in Sources */,
 				CFAEBDF41D09A43A0097597F /* SettingsViewController.m in Sources */,
 				CF1B7C3C1D05D39500260CD4 /* ServerEndPoints.m in Sources */,
+				CFCC59121D09C3D900DD55DA /* PremiseTableHeaderView.m in Sources */,
 				CF64A60F1B4A9A5D00F29857 /* AppDelegate.m in Sources */,
+				CFAEBDFE1D09BACF0097597F /* PremiseCell.m in Sources */,
+				CFAEBDFB1D09A89C0097597F /* ArgumentTableHeaderView.m in Sources */,
 				CF698C5A1D072052000DB479 /* ArgumentsViewController.m in Sources */,
 				CF64A60C1B4A9A5D00F29857 /* main.m in Sources */,
 				CF64A63E1B4A9B3B00F29857 /* Newsfeed.m in Sources */,
@@ -410,6 +455,7 @@
 				CFAEBDEB1D0872650097597F /* ARGError.m in Sources */,
 				CF698C5D1D072573000DB479 /* ArgumentsCell.m in Sources */,
 				CF64A6361B4A9AAB00F29857 /* Premise.m in Sources */,
+				CFAEBE081D09C1660097597F /* PremiseDetailsViewController.m in Sources */,
 				CFAEBDAE1D0819B70097597F /* Helpers.m in Sources */,
 				CF02A0E11D06F43D005710B1 /* Contention.m in Sources */,
 				CFAEBDE81D084FDB0097597F /* Fallacy.m in Sources */,

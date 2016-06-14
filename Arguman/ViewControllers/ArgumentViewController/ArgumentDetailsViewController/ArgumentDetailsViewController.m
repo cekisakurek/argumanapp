@@ -1,81 +1,64 @@
 //
-//  ArgumentViewController.m
+//  ArgumentDetailsViewController.m
 //  Arguman
 //
-//  Created by Cihan Emre Kisakurek (Company) on 07/06/16.
+//  Created by Cihan Emre Kisakurek (Company) on 09/06/16.
 //  Copyright © 2016 cekisakurek. All rights reserved.
 //
 
-#import "ArgumentsViewController.h"
-#import "Argument.h"
-#import "ArgumentsCell.h"
 #import "ArgumentDetailsViewController.h"
+#import "ArgumentTableHeaderView.h"
+#import "PremiseCell.h"
+#import "Argument.h"
+#import "PremiseDetailsViewController.h"
 
-@interface ArgumentViewController () <UITableViewDelegate,UITableViewDataSource>
+@interface ArgumentDetailsViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (strong) UITableView *tableView;
-@property (strong) ArgumentsController *argumentController;
-@property (strong) ArgumentsCell *heightCalculaterCell;
-@property (strong) UISegmentedControl *segmentedControl;
+@property (strong) ArgumentTableHeaderView *headerView;
+@property (strong) PremiseCell *heightCalculaterCell;
 @end
 
-@implementation ArgumentViewController
+@implementation ArgumentDetailsViewController
 
+- (instancetype)initWithArgument:(Argument *)argument
+{
+    self = [super init];
+    if (self)
+    {
+        self.argument = argument;
+    }
+    return self;
+}
 
 - (void)loadView
 {
     [super loadView];
 
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
-    self.tableView.estimatedRowHeight = 100.0;
     [self.view addSubview:self.tableView];
 
-    [self.tableView registerClass:[ArgumentsCell class] forCellReuseIdentifier:@"cell"];
+    [self.tableView registerClass:[PremiseCell class] forCellReuseIdentifier:@"cell"];
 
-
-    NSArray *items = @[NSLocalizedString(@"New", nil),NSLocalizedString(@"Featured", nil)];
-    self.segmentedControl = [[UISegmentedControl alloc] initWithItems:items];
-    [self.segmentedControl addTarget:self action:@selector(segmentChanged:) forControlEvents:UIControlEventValueChanged];
-    self.navigationItem.titleView = self.segmentedControl;
-
+    self.headerView = [[ArgumentTableHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.bounds.size.width, 100)];
+    self.tableView.tableHeaderView = self.headerView;
 
 }
 
-- (void)viewDidLoad
-{
+
+
+- (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.title = NSLocalizedString(@"Arguments", nil);
-    self.segmentedControl.selectedSegmentIndex = 0;
-    [self.segmentedControl sendActionsForControlEvents:UIControlEventValueChanged];
-
-
+    // Do any additional setup after loading the view.
+    [self.headerView setArgument:self.argument];
 }
 
-- (void)segmentChanged:(id)sender
-{
-    if (self.segmentedControl.selectedSegmentIndex == 0)
-    {
-        __weak ArgumentViewController *weakRef = self;
-
-        [ArgumentsController getNewArgumentsWithCompletion:^(ArgumentsController *argumentsController, NSError *error) {
-            weakRef.argumentController = argumentsController;
-            [weakRef.tableView reloadData];
-        }];
-    }
-    else if (self.segmentedControl.selectedSegmentIndex == 1)
-    {
-        __weak ArgumentViewController *weakRef = self;
-
-        [ArgumentsController getFeaturedArgumentsWithCompletion:^(ArgumentsController *argumentsController, NSError *error) {
-            weakRef.argumentController = argumentsController;
-            [weakRef.tableView reloadData];
-        }];
-    }
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
+
 
 #pragma mark - Table view data source
 
@@ -86,26 +69,39 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return self.argumentController.results.count;
+    return self.argument.topLayerPremises.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ArgumentsCell *cell = (ArgumentsCell *)[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    PremiseCell *cell = (PremiseCell *)[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+
     // Configure the cell...
 
-    Argument *arg = self.argumentController.results[indexPath.row];
-    [cell setArgument:arg];
+    Premise *premise = self.argument.topLayerPremises[indexPath.row];
+    [cell setPremise:premise];
+    if (premise.childPremises.count)
+    {
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    else
+    {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+
 
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    Argument *arg = self.argumentController.results[indexPath.row];
-    ArgumentDetailsViewController *detailsViewController = [[ArgumentDetailsViewController alloc] initWithArgument:arg];
-    [self.navigationController pushViewController:detailsViewController animated:YES];
+    Premise *premise = self.argument.topLayerPremises[indexPath.row];
+
+    if (premise.childPremises.count)
+    {
+        PremiseDetailsViewController *detailsViewController = [[PremiseDetailsViewController alloc] initWithPremise:premise];
+        [self.navigationController pushViewController:detailsViewController animated:YES];
+    }
 }
 
 
@@ -123,12 +119,12 @@
     // never returned from the tableView:cellForRowAtIndexPath: method!
 
     if (!self.heightCalculaterCell) {
-        self.heightCalculaterCell = [[ArgumentsCell alloc] init];
+        self.heightCalculaterCell = [[PremiseCell alloc] init];
 
     }
 
-    Argument *arg = self.argumentController.results[indexPath.row];
-    [self.heightCalculaterCell setArgument:arg];
+    Premise *premise = self.argument.topLayerPremises[indexPath.row];
+    [self.heightCalculaterCell setPremise:premise];
 
 
     // Configure the cell with content for the given indexPath, for example:

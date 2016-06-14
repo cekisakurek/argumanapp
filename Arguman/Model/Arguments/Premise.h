@@ -49,6 +49,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly, strong) NSDate *creationDate;
 @property (readonly, copy) NSArray *supporters;
 
+- (NSArray *)childPremises;
+
 - (instancetype)initWithJSONResponse:(NSDictionary *)response;
 
 //adding premise to premise

@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly, assign) NSUInteger count;
 
 + (void)getArgumentsWithCompletion:(void (^)(ArgumentsController * _Nullable argumentsController, NSError * _Nullable error))completionBlock;
++ (void)getNewArgumentsWithCompletion:(void (^)(ArgumentsController * _Nullable argumentsController, NSError * _Nullable error))completionBlock;
 + (void)getFeaturedArgumentsWithCompletion:(void (^)(ArgumentsController * _Nullable argumentsController, NSError * _Nullable error))completionBlock;
 + (void)searchArguments:(NSString *)keyword completion:(void (^)(ArgumentsController * _Nullable argumentsController, NSError * _Nullable error))completionBlock;
 
@@ -44,6 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 - (NSArray *)topLayerPremises;
+
 
 - (NSNumber *)becauseCount;
 - (NSNumber *)butCount;

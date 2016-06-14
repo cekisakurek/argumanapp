@@ -54,6 +54,25 @@
 }
 
 
+- (NSArray *)childPremises
+{
+    NSMutableArray *array = [NSMutableArray array];
+    for (Premise *p in self.parentArgument.premises) {
+        if ([p.parentID isEqualToNumber:self.ID]) {
+            [array addObject:p];
+        }
+    }
+
+    NSSortDescriptor *dateDescriptor = [NSSortDescriptor
+                                        sortDescriptorWithKey:@"creationDate"
+                                        ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:dateDescriptor];
+    NSArray *sortedArray = [array
+                            sortedArrayUsingDescriptors:sortDescriptors];
+
+    return sortedArray;
+}
+
 - (void)postPremiseWithType:(PremiseType)type text:(NSString *)text sources:(NSString *)sources completion:(void (^)(Premise *premise, NSError *error))completionBlock
 {
     [self.parentArgument _postPremiseWithType:type text:text parentPremiseID:[self.ID stringValue] sources:sources completion:completionBlock];

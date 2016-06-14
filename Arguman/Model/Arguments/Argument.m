@@ -12,6 +12,9 @@
 #import "Constants.h"
 #import "Helpers.h"
 
+@interface Premise ()
+- (void)setParentArgument:(Argument *)arg;
+@end
 
 @implementation Argument
 
@@ -45,6 +48,7 @@
 
     return sortedArray;
 }
+
 
 - (NSNumber *)becauseCount
 {
@@ -101,6 +105,7 @@
     for (NSDictionary *d in TRY_CAST(response[@"premises"], NSArray))
     {
         Premise *p = [[Premise alloc] initWithJSONResponse:d];
+        [p setParentArgument:self];
         [arr addObject:p];
     }
 
@@ -508,6 +513,11 @@
 + (void)getArgumentsWithCompletion:(void (^)(ArgumentsController *argumentsController, NSError *error))completionBlock
 {
     [self _getArgumentsWithFeatured:NO ordering:nil keyword:nil completion:completionBlock];
+}
+
++ (void)getNewArgumentsWithCompletion:(void (^)(ArgumentsController * _Nullable argumentsController, NSError * _Nullable error))completionBlock
+{
+    [self _getArgumentsWithFeatured:NO ordering:@"-date_creation" keyword:nil completion:completionBlock];
 }
 
 + (void)getFeaturedArgumentsWithCompletion:(void (^)(ArgumentsController *argumentsController, NSError *error))completionBlock

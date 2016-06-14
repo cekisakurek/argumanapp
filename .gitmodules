@@ -1,0 +1,3 @@
+[submodule "NSDate-TimeAgo"]
+	path = NSDate-TimeAgo
+	url = https://github.com/kevinlawler/NSDate-TimeAgo.git
